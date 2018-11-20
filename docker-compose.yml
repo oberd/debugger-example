@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  web:
+    build: .
+    environment:
+      - VIRTUAL_HOST=debugger.oberd.test
+      - VIRTUAL_PORT=7000
+    ports:
+      - 7000:80
+    volumes:
+      - ./:/var/www/app
